@@ -1,0 +1,17 @@
+Instalar o CUPS e o AVAHI
+Como referimos o CUPS é uma solução open-source de impressão. Já o AVAHI é implementação também open-source do zero-configuration networking (zeroconf) que inclui um sistema para descoberta de serviços multicast DNS/DNS-SD. Para instalarem o CUPS e o AVAHI devem usar o seguinte comando:
+
+sudo apt-get install avahi-daemon cups cups-pdf
+Em seguida vamos permitir que o user "pi" possa administrar a configuração do CUPS
+
+sudo usermod –a –G lpadmin pi
+Depois de instalado o serviço CUPS, devem proceder às seguintes alterações no ficheiro cupsd.conf.
+
+Primeiro devem abrir o ficheiro de configuração usado o seguinte comando:
+
+sudo nano /etc/cups/cupsd.conf
+Em seguida alterar:
+
+“Listen localhost:631” para “Listen 0.0.0.0:631”
+
+Devem também adicionar o parâmetro Allow @local
