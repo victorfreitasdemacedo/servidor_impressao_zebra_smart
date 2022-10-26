@@ -1,0 +1,29 @@
+#Como Instalar impressoras no Raspberry Pi.
+
+
+##Instalando impressora direta no raspberry pi
+
+Tendo o CUPS já instalado, basta abrir o browser e inserir o <endereço do vosso RPI>:631
+
+Em seguida vamos proceder a configuração da impressora, carregando em Add Printers and Classes
+
+No caso de existirem impressoras ligadas diretamente ao Raspberry Pi estas são de imediato apresentadas. Caso contrário indiquem qual o protocolo que pretendem usar para configurar a vossa impressora.
+
+
+##Instalação de uma impressora de rede
+
+Tendo o CUPS já instalado, basta abrir o browser e inserir o endereço localhost:631
+
+Em seguida vamos proceder a configuração da impressora, carregando em Add Printers and Classes
+
+Em seguida carregamos em Add Printer e inserimos as nossas credenciais do sistema
+
+O CUPS apresenta-nos de imediato uma lista de impressora que conseguiu detectar localmente e remotamente.
+
+Depois podemos indicar uma breve descrição para a localização para a impressora e também, quem assim pretender, partilhar a mesma.
+
+O próximo passo é indicar o modelo (de referir que o CUPS apresenta suporte para um bom numero de modelos). Depois de escolher o modelo carregamos em Add Printer
+
+Definimos alguns parâmetros por omissão que pretendemos atribuir à nossa impressora, como é o caso do tamanho do papel (ex. A4) e está pronto.
+
+Para testar se tudo está a funcionar corretamente, basta abrirem por exemplo o gedit, escreverem algo e mandar imprimir.
